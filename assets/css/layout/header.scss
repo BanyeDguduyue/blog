@@ -1,0 +1,23 @@
+.el-container {
+  .el-header {
+    padding: 0;
+    .header-bg {
+      height: 19vh;
+      text-align: center;
+      background-image: url('/imgs/header-bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: #fff;
+      line-height: 19vh;
+      font-size: 30px;
+    }
+    .wall{
+      height: 1vh;
+      background:
+      linear-gradient(217deg, rgba(85, 38, 38, 0.8), rgba(87, 71, 71, 0) 70.71%),
+      linear-gradient(127deg, rgba(0,0,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    }
+  }
+}
