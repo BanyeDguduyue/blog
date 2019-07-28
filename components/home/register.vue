@@ -12,7 +12,7 @@
     <el-form-item>
       <div class="noaccount">
         已有账号?
-        <span>立即登陆</span>
+        <span @click="tologin">立即登陆</span>
       </div>
     </el-form-item>
     <el-form-item>
@@ -75,6 +75,10 @@ export default {
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();
+    },
+    // 传递信息切换登录注册
+    tologin(){
+      this.$emit('islogin',true)
     }
   }
 };

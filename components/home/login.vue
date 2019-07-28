@@ -14,7 +14,7 @@
     </el-form-item>
     <el-form-item>
       <div class="noaccount">
-        还没有账号?<span>立即注册</span>
+        还没有账号?<span @click="toregister">立即注册</span>
       </div>
     </el-form-item>
     <el-form-item>
@@ -61,6 +61,10 @@ export default {
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();
+    },
+    // 传递信息切换登录注册
+    toregister(){
+      this.$emit('islogin',false)
     }
   }
 };

@@ -1,5 +1,72 @@
 .main-container {
-  padding: 30px;
+
+  // padding: 30px;
+  .tab-style {
+    border-radius: 4px;
+    min-height: 70vh;
+    // background-color: #fff !important;
+
+    .tab {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background: url('/imgs/shad2.png') no-repeat;
+
+      .tab-item {
+        font-size: 12px;
+        line-height: 45px;
+        width: 35%;
+        height: 45px;
+        cursor: pointer;
+        // border-bottom: 1px solid #fff;
+        background: #dbd6d6 url('/imgs/border.png') no-repeat;
+        color: #303133;
+        margin-bottom: 5px;
+        transition: all 0.3s ease-out;
+        border-radius: 3px;
+        box-shadow: 10px 10px 5px #888;
+        box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5)
+      }
+
+      .tab-item:first-child {
+        margin-top: 30px;
+      }
+
+      .tab-item-content {
+        font-weight: bold;
+        font-size: 16px;
+        margin-left: 5px;
+        text-align: left;
+        transition: all 0.3s ease-out
+      }
+
+      .tab-item:hover .tab-item-content {
+        padding-left: 10px
+      }
+
+      .tab-item:hover {
+        box-shadow:
+          0 -8px 8px -8px rgba(0, 0, 0, 0.5),
+          0 8px 8px -8px rgba(0, 0, 0, 0.5);
+        width: 50%;
+      }
+    }
+  }
+  .article-content{
+    margin-top: 30px;
+  }
+  .login-container-style {
+    padding: 30px;
+
+    // overflow: hidden;
+    .login-container {
+      overflow: hidden;
+      padding: 30px 60px;
+      background-color: #fff;
+    }
+  }
 
   .el-row {
     margin-bottom: 20px;
@@ -18,7 +85,7 @@
   }
 
   .bg-purple {
-    background: #d3dce6;
+    // background: #d3dce6;
   }
 
   .bg-purple-light {
@@ -27,7 +94,7 @@
 
   .grid-content {
     border-radius: 4px;
-    min-height: 36px; 
+    min-height: 36px;
   }
 
   .row-bg {

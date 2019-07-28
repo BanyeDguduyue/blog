@@ -1,36 +1,9 @@
 .el-main {
-  background-color: #E9EEF3;
+  background-color: #eae9ea;
   color: #333;
-  text-align: center;
+  // text-align: center;
   min-height: 70vh;
   padding: 0;
-  .tab-style{
-    border-radius: 4px;
-    min-height: 70vh;
-    .tab {
-      background-color: #fff;
-      min-height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      background-color: #ccc;
-      .tab-item {
-        font-size: 14px;
-        line-height: 45px;
-        width: 100%;
-        height: 45px;
-        cursor: pointer;
-        border-bottom: 1px solid #fff;
-      }
-    }
-  }
-  .login-container-style{
-    padding: 30px;
-    .login-container{
-      padding: 30px 60px
-    }
-  }
   .el-row {
     margin-bottom: 20px;
 
@@ -48,7 +21,7 @@
   }
 
   .bg-purple {
-    background: #d3dce6;
+    // background: #d3dce6;
   }
 
   .bg-purple-light {
@@ -57,7 +30,7 @@
 
   .grid-content {
     border-radius: 4px;
-    min-height: 36px; 
+    min-height: 36px;
   }
 
   .row-bg {
@@ -65,4 +38,3 @@
     background-color: #f9fafc;
   }
 }
-
