@@ -1,7 +1,9 @@
 
 <template>
   <div class="article-container">
+    <!-- markdown区域 -->
     <div v-html="toHtml" class="markdown-body"></div>
+    <!-- 评论区域 -->
     <div class="comments">
       <div class="comments-item">
         <div class="comment-top">
@@ -15,6 +17,10 @@
           做的还可以加油
         </div>
       </div>
+    </div>
+    <!-- 评论输入区域 -->
+    <div class="comment-input-area">
+
     </div>
   </div>
 </template>

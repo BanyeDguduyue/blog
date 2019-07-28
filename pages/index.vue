@@ -1,43 +1,49 @@
 <template>
   <div class="main-container">
-
     <el-col :gutter="20">
-        <el-col :span="4">
-          <div class="tab-style grid-content bg-purple">
-            <div class="tab">
-              <div class="tab-item" v-for="(item,index) in tablist" :key="index">
-                <!-- 动态路由 -->
-                <nuxt-link tag="div" :to="{path:`/${item.type}`}" class="tab-item-content" @click.native.prevent="gettype(item.type)">{{item.name}}</nuxt-link>
-              </div>
+      <el-col :span="4">
+        <div class="tab-style grid-content bg-purple">
+          <div class="tab">
+            <div class="tab-item" v-for="(item,index) in tablist" :key="index">
+              <!-- 动态路由 -->
+              <nuxt-link
+                tag="div"
+                :to="{path:`/${item.type}`}"
+                class="tab-item-content"
+                @click.native.prevent="gettype(item.type)"
+              >{{item.name}}</nuxt-link>
             </div>
           </div>
-        </el-col>
-        <el-col :span="12">
-          <div class='article-content'>
-            <nuxt-child :articlelist='list' :currenttype='currenttype'></nuxt-child>
-          </div>
-        </el-col>
-        <el-col :span="5">
-          <div class="login-container-style">
-            <div class="login-container grid-content bg-purple">
-              <transition name="fade" mode="out-in">
-                <Login @islogin="getloginmsg" v-if="toggle" />
-                <Register @islogin="getloginmsg" v-else />
-              </transition>
-            </div>
-          </div>
-        </el-col>
+        </div>
       </el-col>
+      <el-col :span="12">
+        <div class="article-content">
+          <nuxt-child :articlelist="list" :currenttype="currenttype"></nuxt-child>
+
+        </div>
+        <div class="pagination">
+          <el-pagination background layout="prev, pager, next" :total="1000"></el-pagination>
+        </div>
+      </el-col>
+      <el-col :span="5">
+        <div class="login-container-style">
+          <div class="login-container grid-content bg-purple">
+            <transition name="fade" mode="out-in">
+              <Login @islogin="getloginmsg" v-if="toggle" />
+              <Register @islogin="getloginmsg" v-else />
+            </transition>
+          </div>
+        </div>
+      </el-col>
+    </el-col>
   </div>
 </template>
 
 <script>
-import ContentType from "@/components/home/contentType";
 import Login from "@/components/home/login";
 import Register from "@/components/home/register";
 export default {
   components: {
-    ContentType,
     Register,
     Login
   },
@@ -52,14 +58,14 @@ export default {
         { name: "HTML", type: "html" },
         { name: "Css", type: "css" }
       ]
-    }
+    };
   },
-  methods:{
+  methods: {
     // 获取类型并赋值给currenttype
     gettype(type) {
       this.currenttype = type;
-      console.log(this.currenttype); 
-      if(this.currenttype == 'javascript'){
+      console.log(this.currenttype);
+      if (this.currenttype == "javascript") {
         this.list = [
           {
             title: "node",
@@ -96,20 +102,17 @@ export default {
       this.toggle = msg;
     }
   },
-  created:function(){
-      this.$router.push('/home'); // 页面加载时跳转
-    },
+  created: function() {
+    this.$router.push("/home"); // 页面加载时跳转
+  },
   watch: {
     // 这里就重新调取关于相关类型的文章
     currenttype(l, lk) {
       if (l == "javascript") {
-        
       }
     }
   },
-  mounted() {
-   
-  }
+  mounted() {}
 };
 </script>
 
